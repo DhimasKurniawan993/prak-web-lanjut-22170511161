@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-</head>
-<body>
-    <div class="container">
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
         <div class="text">
             <img src="{{ asset('assets/img/cropped-cropped-logo-unila-resmi-1.png') }}" alt="Logo" class="logo-img">
             <form action="{{ route('user.store') }}" method="POST">
@@ -34,6 +28,5 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+@endsection
 

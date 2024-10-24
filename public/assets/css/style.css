@@ -104,3 +104,33 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #f8f8ff;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+thead {
+    background-color: #01016f;
+    color: #f8f8ff;
+}
+
+table tr{
+    border: 1px solid #ddd;
+}
+
+table th, table td {
+    padding: 12px;
+}
+
+.tombol-red{
+    background-color: #dc3545;
+    color: #f8f8ff;
+}
+.tombol-green{
+    background-color: #0ec43e;
+    color: #f8f8ff;
+}

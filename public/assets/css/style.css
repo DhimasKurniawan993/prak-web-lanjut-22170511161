@@ -57,6 +57,14 @@ body {
     color: #f8f8ff;
 }
 
+.text-danger {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 15px; 
+    font-weight: bold;
+}
+
 form {
     padding: 20px;
     border-radius: 5px;
@@ -72,6 +80,11 @@ form label{
 }
 
 input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+select {
     padding: 10px;
     font-size: 16px;
     border-radius: 15px;

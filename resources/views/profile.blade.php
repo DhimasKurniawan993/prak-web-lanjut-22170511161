@@ -12,7 +12,7 @@
             <img src="{{ asset('assets/img/cat_profil.png') }}" alt="Profile Picture" class="profile-img">
             <div class="text-info">
                 <h1>{{ $nama }}</h1>
-                <p><strong>Kelas:</strong> {{ $kelas }}</p>
+                <p><strong>Kelas:</strong> {{ $nama_kelas ?? 'Kelas Tidak Ditemukan' }}</p>
                 <p><strong>NPM:</strong> {{ $npm }}</p>
             </div>
         </div>

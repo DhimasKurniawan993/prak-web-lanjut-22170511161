@@ -22,7 +22,7 @@ class UserController extends Controller
 {
     $data = [
         'title' => 'List User',
-        'users' => $this->userModel->getUser(),
+        'user' => $this->userModel->getUser(),
     ];
 
     return view('list_user', $data);
@@ -45,13 +45,30 @@ public function create(){
 
 public function store(Request $request)
 {
-    $this->userModel->create([
-        'nama' => $request->input('nama'),
-        'npm' => $request->input('npm'),
-        'kelas_id' => $request->input('kelas_id'),
+    // Validasi input
+    $request->validate([
+        'nama' => 'required',
+        'npm' => 'required',
+        'kelas_id' => 'required',
+        'foto' => 'image|file|max:2048', // Validasi foto
     ]);
 
-    return redirect()->to('/user');
+    // Proses upload foto
+    if ($request->hasFile('foto')) {
+        $file = $request->file('foto');
+        $filename = time() . '_' . $file->getClientOriginalName();
+        $file->storeAs('upload', $filename); // Menyimpan file ke storage
+
+        // Simpan data user ke database
+        $this->userModel->create([
+            'nama' => $request->input('nama'),
+            'npm' => $request->input('npm'),
+            'kelas_id' => $request->input('kelas_id'),
+            'foto' => $filename, // Menyimpan nama file ke database
+        ]);
+    }
+
+    return redirect()->to('/user/list');
 }
 
 

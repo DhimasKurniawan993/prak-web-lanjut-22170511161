@@ -3,7 +3,6 @@ body {
     background-color: #74bcff;
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -11,6 +10,8 @@ body {
 
 .container {
     background-color: #01016f;
+    margin-top: 30px;
+    margin-inline: auto;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -84,6 +85,14 @@ input {
     font-size: 16px;
     border-radius: 15px;
 }
+
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+
 select {
     padding: 10px;
     font-size: 16px;
@@ -109,7 +118,7 @@ table {
     width: 90%;
     border-collapse: collapse;
     background-color: #f8f8ff;
-    margin: 20px 0;
+    margin: auto;
     font-size: 18px;
     text-align: left;
 }
@@ -133,4 +142,9 @@ table th, table td {
 .tombol-green{
     background-color: #0ec43e;
     color: #f8f8ff;
+}
+
+.tombol-atas{
+    padding-left: 70px;
+    padding-bottom: 15px;
 }

@@ -65,6 +65,7 @@ public function store(Request $request)
             'npm' => $request->input('npm'),
             'kelas_id' => $request->input('kelas_id'),
             'foto' => $filename, // Menyimpan nama file ke database
+            'jurusan_id' => $request->input('jurusan_id'),
         ]);
     }
 

@@ -12,6 +12,7 @@
             <th>NPM</th>
             <th>Kelas</th>
             <th>Foto</th>
+            <th>Jurusan</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -24,6 +25,7 @@
                 <td><?= $user['nama']?></td>
                 <td><?= $user['npm']?></td>
                 <td><?= $user['nama_kelas']?></td>
+                <td><?= $user['jurusan']?></td>
                 <td>
                 <img src="{{ asset('storage/upload/' . $user->foto) }}" alt="Foto Pengguna" style="height: 100px;">
                 </td>

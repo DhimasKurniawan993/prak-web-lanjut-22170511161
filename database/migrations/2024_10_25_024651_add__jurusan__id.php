@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //Schema::table('user', function (Blueprint $table) {
-        //    $table->string('foto')->nullable(); // Menambahkan kolom foto
-        //})
+        Schema::table('user', function (Blueprint $table) {
+            $table->foreignId('Jurusan_Id')->nullable();
+        });
     }
 
     /**
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //Schema::table('user', function (Blueprint $table) {
-        //    $table->dropColumn('foto'); // Menghapus kolom foto
-        //});
+        Schema::table('user', function (Blueprint $table) {
+            $table->dropColumn('jurusan_id'); // Menghapus kolom foto
+        });
     }
 };

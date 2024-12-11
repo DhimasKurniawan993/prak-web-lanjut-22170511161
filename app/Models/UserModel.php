@@ -17,6 +17,7 @@ class UserModel extends Model
         'npm',
         'kelas_id',
         'foto',
+        'jurusan_id',
     ];
 
     public function getUser(){

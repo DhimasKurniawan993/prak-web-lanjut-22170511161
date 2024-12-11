@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //Schema::table('user', function (Blueprint $table) {
-        //    $table->string('foto')->nullable(); // Menambahkan kolom foto
-        //})
+        Schema::create('Jurusan', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_jurusan');
+            $table->foreignId('fakultas_id')->constrained();
+        });
     }
 
     /**
@@ -21,8 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //Schema::table('user', function (Blueprint $table) {
-        //    $table->dropColumn('foto'); // Menghapus kolom foto
-        //});
+        Schema::dropIfExists('Jurusan');
     }
 };

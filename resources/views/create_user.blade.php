@@ -24,6 +24,12 @@
                     @endforeach
                 </select><br>
 
+                <label for="jurusan"><strong>Jurusan:</strong></label>
+                <input type="text" id="jurusan_id" name="jurusan_id"><br>
+                @foreach($errors->get('jurusan_id') as $msg)
+                    <p class="text-danger">{{$msg}}</p>
+                @endforeach
+
                 <label for="kelas"><strong>Foto:</strong></label>
                 <input type="file" name="foto" id="foto">
 

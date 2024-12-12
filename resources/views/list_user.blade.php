@@ -25,7 +25,7 @@
                 <td><?= $user['npm']?></td>
                 <td><?= $user['nama_kelas']?></td>
                 <td>
-                <img src="{{ asset('storage/upload/' . $user->foto) }}" alt="Foto Pengguna" style="height: 100px;">
+                <img src="{{ asset('storage/upload/img/' . $user->foto) }}" alt="Foto Pengguna" style="height: 100px;">
                 </td>
                 <td><button>Edit</button> <button class=tombol-red>hapus</button></td>
             </tr>

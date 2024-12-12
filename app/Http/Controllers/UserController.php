@@ -57,7 +57,7 @@ public function store(Request $request)
     if ($request->hasFile('foto')) {
         $file = $request->file('foto');
         $filename = time() . '_' . $file->getClientOriginalName();
-        $file->storeAs('upload', $filename); // Menyimpan file ke storage
+        $file->storeAs('/public/upload/img/', $filename); // Menyimpan file ke storage
 
         // Simpan data user ke database
         $this->userModel->create([
